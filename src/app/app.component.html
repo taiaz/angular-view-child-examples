@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <span>My Application</span>
+</mat-toolbar>
+
+<br />
+<div style="margin-left: 10px;">
+  Example to change HTML element content:
+  <h3 #title>View child here...</h3>
+
+  <mat-tab-group>
+    <mat-tab label="Viewchild with child component">
+      <h5>Parent component</h5>
+      <button mat-raised-button color="accent" (click)="getAngularVersion()">
+        Angular Version from child component
+      </button>
+      <button mat-raised-button color="accent" (click)="toggleChild()">
+        Toggle child component
+      </button>
+
+      <div>Data from child Component : {{ angularVersion }}</div>
+      <app-child #ChildComponent></app-child>
+    </mat-tab>
+    <mat-tab label="Viewchild with directive">
+      <div class="container">
+        <p>Viewchild decorator on directive</p>
+        <span appFood></span>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <br />
+  <hr />
+  Check details implmentation of @viewChild on Furetechnews.com<br />
+  <a
+    href="https://furetechnews.com/guide-to-using-and-creating-an-angular-viewchild-decorator/"
+    target="_blank"
+  >
+    How to implement Angular ViewChild Decorator?
+  </a>
+</div>
